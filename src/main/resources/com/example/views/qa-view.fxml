@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controller.QAController">
    <left>
       <TableView fx:id="tableViewBugs" prefHeight="400.0" prefWidth="368.0" BorderPane.alignment="CENTER">
         <columns>
@@ -36,12 +35,12 @@
                   <Font name="Verdana" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="recordButton" layoutX="42.0" layoutY="140.0" mnemonicParsing="false" text="Record">
+            <Button fx:id="recordButton" layoutX="42.0" layoutY="140.0" mnemonicParsing="false" onAction="#onClickRecordBug" text="Record">
                <font>
                   <Font name="Verdana" size="14.0" />
                </font>
             </Button>
-            <Button fx:id="modifyButton" layoutX="121.0" layoutY="139.0" mnemonicParsing="false" text="Modify">
+            <Button fx:id="modifyButton" layoutX="121.0" layoutY="139.0" mnemonicParsing="false" onAction="#onClickModifyBug" text="Modify">
                <font>
                   <Font size="14.0" />
                </font>

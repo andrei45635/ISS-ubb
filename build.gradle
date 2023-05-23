@@ -1,8 +1,8 @@
 plugins {
     id 'java'
     id 'application'
-    id 'org.javamodularity.moduleplugin' version '1.8.12'
-    id 'org.openjfx.javafxplugin' version '0.0.13'
+    //id 'org.javamodularity.moduleplugin' version '1.8.12'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
     id 'org.beryx.jlink' version '2.25.0'
 }
 
@@ -25,12 +25,12 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'com.example.demo'
+    //mainModule = 'com.example.demo'
     mainClass = 'com.example.demo.HelloApplication'
 }
 
 javafx {
-    version = '17.0.2'
+    version = '19'
     modules = ['javafx.controls', 'javafx.fxml']
 }
 
@@ -38,6 +38,10 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    implementation group: 'com.github.gwenn', name: 'sqlite-dialect', version: '0.1.0'
+    implementation group: 'org.xerial', name: 'sqlite-jdbc', version: '3.36.0.3'
+    implementation group: 'org.hibernate', name:'hibernate-core', version: '5.6.5.Final'
+    runtimeOnly group: 'org.xerial', name: "sqlite-jdbc", version: '3.36.0.3'
 }
 
 test {
