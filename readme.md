@@ -11,7 +11,7 @@
 <p> Planificare iteratii: </p>
 
 <ol> 
-  <li> Autentificare, Vizualizare lista buguri, Adaugare bug, Rezolvare bug 🔜 </li>
-  <li> Modificare bug 🔜 </li>
-  <li> Filtrare bug dupa nume/descriere 🔜 </li>
+  <li> Autentificare, Vizualizare lista buguri, Adaugare bug ✔️ </li>
+  <li> Modificare bug, Rezolvare bug ✔️ </li>
+  <li> Filtrare bug dupa nume/descriere ✔️ </li>
 </ol>
