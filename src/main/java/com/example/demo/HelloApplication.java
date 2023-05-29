@@ -20,8 +20,7 @@ public class HelloApplication extends Application {
         Properties props=new Properties();
         try {
             props.load(new FileReader("bd.config"));
-        } catch (
-                IOException e) {
+        } catch (IOException e) {
             System.out.println("Cannot find bd.config "+e);
         }
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/com/example/views/login-view.fxml"));

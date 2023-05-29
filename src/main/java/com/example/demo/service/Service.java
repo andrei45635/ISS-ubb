@@ -57,7 +57,6 @@ public class Service implements Observable<BugEntityChangeEvent> {
     }
 
     public LoginResponse login(String username, String password) {
-        //LoginResponse loginResponse = new LoginResponse(LoginType.ERROR, (QA) null);
         LoginResponse loginResponse = new LoginResponse(LoginType.ERROR);
         QA loggedInQA = findQAByUsernamePwd(username, password);
         System.out.println(loggedInQA);
@@ -85,7 +84,6 @@ public class Service implements Observable<BugEntityChangeEvent> {
     }
 
     public void solveBug(int id){
-        //bug.setStatus(BugStatus.SOLVED);
         bugsRepo.solveBug(id, BugStatus.SOLVED);
         notifyObservers(new BugEntityChangeEvent(ChangeEventType.SOLVE, new Bug(id, "random", "random", BugStatus.SOLVED)));
     }

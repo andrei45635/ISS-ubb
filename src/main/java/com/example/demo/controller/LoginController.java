@@ -46,7 +46,7 @@ public class LoginController {
             Parent root = loader.load();
             QAController qaController = loader.getController();
             qaController.setLoggedInQA(loggedInQA);
-            qaController.setWelcomeLabelQA(loggedInQA);
+            qaController.setWelcomeLabelQA();
             qaController.setService(service);
             Stage stage = new Stage();
             stage.setScene(new Scene(root, 600, 400));

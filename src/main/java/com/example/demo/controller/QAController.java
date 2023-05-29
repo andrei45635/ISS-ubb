@@ -39,13 +39,13 @@ public class QAController implements Observer<BugEntityChangeEvent> {
     private QA loggedInQA;
     private final ObservableList<Bug> bugsModel = FXCollections.observableArrayList();
 
-    public void setService(Service service) throws IOException {
+    public void setService(Service service) {
         this.service = service;
         service.addObserver(this);
         initModel();
     }
     public void setLoggedInQA(QA qa) {this.loggedInQA = qa;}
-    public void setWelcomeLabelQA(QA qa) {welcomeLabelQA.setText("Welcome, " + qa.getUsername());}
+    public void setWelcomeLabelQA() {welcomeLabelQA.setText("Welcome, " + this.loggedInQA.getUsername());}
 
     @FXML
     public void initialize() {
